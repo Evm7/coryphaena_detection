@@ -35,7 +35,7 @@ class DatasetConfig(Config):
 class InferenceConfig(DatasetConfig):
     GPU_COUNT = 1
     IMAGES_PER_GPU = 1
-    NUM_CLASSES = 26
+    NUM_CLASSES =  1 + 26
 
 
 class Dataset(utils.Dataset):
