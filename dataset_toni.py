@@ -10,7 +10,7 @@ from pycocotools import mask as maskUtils
 
 # Root directory of the project
 
-ROOT_DIR=sys.path.append('')
+ROOT_DIR = sys.path.append('')
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
@@ -21,7 +21,7 @@ import mrcnn.model as modellib
 
 module = inspect.getmodule(Config)
 module_path = os.path.dirname(module.__file__)
-print ("MODULE PATH" + module_path)
+print("MODULE PATH" + module_path)
 
 
 class DatasetConfig(Config):
@@ -30,11 +30,12 @@ class DatasetConfig(Config):
     NUM_CLASSES = 1 + 26
     STEPS_PER_EPOCH = 400
     VALIDATION_STEPS = 200
-    
-    
+
+
 class InferenceConfig(DatasetConfig):
     GPU_COUNT = 1
-    IMAGES_PER_GPU =1
+    IMAGES_PER_GPU = 1
+    NUM_CLASSES = 1 + 26
 
 
 class Dataset(utils.Dataset):
@@ -43,7 +44,7 @@ class Dataset(utils.Dataset):
 
         class_ids = sorted(coco.getCatIds())
         image_ids = list(coco.imgs.keys())
-        
+
         # Add classes
         for i in class_ids:
             self.add_class("coco", i, coco.loadCats(i)[0]["name"])
@@ -126,4 +127,4 @@ class Dataset(utils.Dataset):
         """
         rle = self.annToRLE(ann, height, width)
         m = maskUtils.decode(rle)
-        return m    
+        return m
