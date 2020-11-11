@@ -1,0 +1,19 @@
+# Ignore weigths #
+##################
+weights/*
+
+# Ignore dataset of annotation #
+##################
+dataset/*
+
+# Ignore dataset of images #
+##################
+images/*
+
+# Ignore logs when training, testing or evaluating #
+##################
+logs/*
+
+# Ignore cache #
+##################
+__pycache__/*
