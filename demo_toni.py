@@ -153,7 +153,7 @@ class Demo_toni():
                                     exclude=["mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
 
         else:
-            from dataset import InferenceConfig
+            from dataset_toni import InferenceConfig
             inference_config = InferenceConfig()
             inference_config.display()
             # Recreate the model in inference mode
