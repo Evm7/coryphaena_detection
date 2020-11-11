@@ -249,7 +249,7 @@ class Demo_toni():
     def evaluation(self, number_of_images, confussion, directory):
         # Compute VOC-Style mAP @ IoU=0.5
         # Running on 'number_of_images' images. Increase for better accuracy.
-        image_ids = np.random.choice(self.dataset_val.image_ids, number_of_images)
+        image_ids = self.dataset_val.image_ids
 
         APs = []
 
@@ -352,7 +352,9 @@ class Demo_toni():
             gt_pred_tot_json = {"gt_tot": gt_tot.astype(int), "pred_tot": pred_tot.astype(int)}
             df = pd.DataFrame(gt_pred_tot_json)
             df.to_json(os.path.join(savedir, 'gt_pred_test.json'))
-
+            print(gt_tot)
+            print(pred_tot)
+            print(self.dataset_val.class_names)
             confMatrix.plot_confusion_matrix_from_data(gt_tot, pred_tot, columns=self.dataset_val.class_names,
                                                        annot=True,
                                                        cmap="Oranges",
