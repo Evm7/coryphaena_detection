@@ -170,7 +170,8 @@ class Demo_toni():
 
             # Load trained weights
             print("Loading weights from ", model_path)
-            self.model.load_weights(model_path, by_name=True)
+            self.model.load_weights(model_path, by_name=True,
+                                    exclude=["mrcnn_class_logits", "mrcnn_bbox_fc", "mrcnn_bbox", "mrcnn_mask"])
 
     def create_augmentation(self, visualize_augm=False):
         # The imgaug library is pretty flexible and make different types of augmentation possible.
