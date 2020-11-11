@@ -79,7 +79,6 @@ class Demo_toni():
 
     def configuration(self):
         self.config = DatasetConfig()
-        self.config.display()
 
         self.date = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
         print("Date" + str(self.date))
@@ -140,6 +139,7 @@ class Demo_toni():
 
     def create_model(self, mode='training', weights_path=None):
         if mode == 'training':
+            self.config.display()
             # Create model in training mode (training)
             self.model = modellib.MaskRCNN(mode=mode, config=self.config, model_dir=self.MODEL_DIR)
             # Which weights to start with?
@@ -155,7 +155,7 @@ class Demo_toni():
         else:
             from dataset import InferenceConfig
             inference_config = InferenceConfig()
-
+            inference_config.display()
             # Recreate the model in inference mode
             self.model = modellib.MaskRCNN(mode="inference", config=inference_config, model_dir=self.MODEL_DIR)
 
