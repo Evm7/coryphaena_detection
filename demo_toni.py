@@ -791,7 +791,7 @@ class automatiscm():
                             help='Introduce the layers tou want to train: either "all" or "heads"')
         parser.add_argument('--train_dataset', type=str, default="train.json",
                             help='Introduce the path to the training dataset')
-        parser.add_argument('--val_dataset', type=str, default="val.json",
+        parser.add_argument('--val_dataset', type=str, default="/toni_test/ann/coco_test.json",
                             help='Introduce the path to the validation dataset')
         parser.add_argument('--test_dataset_images', type=str, default='',
                             help='Introduce the path to the testing dataste image directory')
