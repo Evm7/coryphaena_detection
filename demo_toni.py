@@ -352,7 +352,7 @@ class Demo_toni():
             gt_pred_tot_json = {"gt_tot": gt_tot.astype(int), "pred_tot": pred_tot.astype(int)}
             df = pd.DataFrame(gt_pred_tot_json)
             df.to_json(os.path.join(savedir, 'gt_pred_test.json'))
-            ids = np.unique(np.extend(gt_tot,pred_tot, 0))
+            ids = np.unique(np.append(gt_tot,pred_tot, 0))
             names = np.array(self.dataset_val.class_names)
             columns = [names[int(i)] for i in ids]
             confMatrix.plot_confusion_matrix_from_data(gt_tot, pred_tot, columns=columns,
