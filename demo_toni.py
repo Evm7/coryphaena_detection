@@ -778,11 +778,11 @@ class automatiscm():
                             help='Introduce the argumnent to not display the processing of the images step by step')
         parser.add_argument('--save', action="store_true", default=False,
                             help='Introduce the argument to save the processed images')
-        parser.add_argument('--confussion', action="store_false", default=True,
+        parser.add_argument('--notconfussion', action="store_false", default=True,
                             help='Whether to show the mattrix of confussion or not')
         parser.add_argument('--mode', type=str, default="testing",
                             help='Introduce the aim of the execution: training, evaluating or testing')
-        parser.add_argument('--weights_path', type=str, default="weights/mask_rcnn_llampuga_0068.h5",
+        parser.add_argument('--weights_path', type=str, default="weights/mask_rcnn_toni_0045.h5",
                             help='Introduce the path to the weigths')
         parser.add_argument('--epochs', type=int, default=100, help='Introduce the number of epochs for the training')
         parser.add_argument('--image_num', type=int, default=30,
@@ -823,7 +823,7 @@ class automatiscm():
 
         elif mode == "evaluating":
             print("[INFO] Evaluating ...", flush=True)
-            self.evaluation(directory=args.directory, confussion=args.confussion, number_of_images=args.image_num)
+            self.evaluation(directory=args.directory, confussion=args.notconfussion, number_of_images=args.image_num)
 
         else:
             print("Error while choosing the Mode", flush=True)
