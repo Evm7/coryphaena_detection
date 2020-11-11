@@ -43,13 +43,13 @@ NOTE: Make sure CUDA_HOME environment variable is set.
 
 There is plenty of arguments variations that can modificate the functioning of the video detector:
 ```
-python demo_llampuga.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path <weigth_path_file.h5>] [--not_display]  [--save] [--confussion] [--epochs EPOCHS] [--image_num IMAGE_NUM] [--layers LAYERS] ...
+python demo_llampuga.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path <weigth_path_file.h5>] [--not_display]  [--save] [--notconfussion] [--epochs EPOCHS] [--image_num IMAGE_NUM] [--layers LAYERS] ...
 ```
 
 - "--directory" -->"Path to the directory of images to be tested"
 - '--not_display' -->'Introduce this argument to avoid displaying the image
 - '--save' -->'Introduce this argument to save the processed images
-- '--confussion' -->'Whether to show the mattrix of confussion or not'
+- '--notconfussion' -->'Whether to show the mattrix of confussion or not [Default:yes]'
 - '--mode' -->'Introduce the aim of the execution: training, evaluating or testing'
 - '--weigths_path' -->'Introduce the path to the weigths'
 - '--epochs' -->'Introduce the number of epochs for the training'
