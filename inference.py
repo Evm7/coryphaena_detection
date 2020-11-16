@@ -18,6 +18,7 @@ class Inference():
         self.mode = "Testing"
         self.weigth_path = args.weights
         self.testing_dataset = "testing/test.json"
+        self.save_image = args.save_image
         self.directory = args.directory
         self.output_path = args.output
         self.base_results = "/home/amaya/FOTOPEIX/MASK_RCNN/ESTEVE/inference"
@@ -32,14 +33,14 @@ class Inference():
         parser.add_argument("-i", "--directory", type=str, default="~/FOTOPEIX/MASK_RCNN/ESTEVE/inference", help="Path to the directory of the images to be analyzed")
         parser.add_argument("--weights", type=str, default="mask_rcnn_llampuga_0068.h5", help="Path to the weights to use for the inference")
         parser.add_argument("--output", type=str, default="inference", help="Path to the output directory to store the images")
-
+        parser.add_argument('--save_image', action="store_true", default=False, help='Introduce to save the processed images')
         args = parser.parse_args()
         return args
 
     def inference(self):
         print("[INFO] Starting ...", flush=True)
         print("[INFO] Inference ...", flush=True)
-        self.demoLlampuga.testing(directory=self.directory, visualize=False, save=True, llotja=True, new_path=self.base_results)
+        self.demoLlampuga.testing(directory=self.directory, visualize=False, save=self.save_image, llotja=True, new_path=self.base_results)
 
     def getDate(self, name):
         if "/" in name:
