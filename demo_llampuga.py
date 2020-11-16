@@ -420,7 +420,8 @@ class Demo_LLampuga():
                     if isinstance(data, bytes):
                         data = data.decode("utf-8")
                         metadatos = getMetadatos(data)
-                        print(metadatos)
+                        if not llotja:
+                            print(metadatos)
                         if "Ord" in metadatos:
                             criterion = ("FAO" in metadatos) and (metadatos["FAO"] == 'DOL') and (
                                         metadatos["Ord"] == '1') and (metadatos["Caj"] == '001')
@@ -429,7 +430,8 @@ class Demo_LLampuga():
                             criterion = ("FAO" in metadatos) and (metadatos["FAO"] == 'DOL') and (
                                         metadatos["Caj"] == '001')
                         if criterion:
-                            print(filename + " --> llampuga")
+                            if not llotja:
+                                print(filename + " --> llampuga")
                             llampugues_img += 1
                             image = cv2.imread(root + filename)
                             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -481,10 +483,12 @@ class Demo_LLampuga():
                             if llotja is False:
                                 pd.DataFrame(final).to_csv(savedir + "/" + filename + '_results.csv', index=None)
                         else:
-                            print(filename + '--> no llampuga')
+                            if not llotja:
+                                print(filename + '--> no llampuga')
                             no_llampugues_img += 1
                     else:
-                        print(filename + '--> no llampuga')
+                        if not llotja:
+                            print(filename + '--> no llampuga')
                         no_llampugues_img += 1
         if llotja is False:
             pd.DataFrame(DATOMAP).to_csv(savedir + "/" + 'DATOs.csv', header=header2, index=None)
@@ -492,8 +496,7 @@ class Demo_LLampuga():
             direct = self.getDirectory_for_llotja(filename)
             pd.DataFrame(DATOMAP).to_csv(direct + "/" + 'DATOs.csv', header=header2, index=None)
 
-        print("For total images: " + str(total_images) + ", we have detected " + str(
-            llampugues_img) + " images of llampugues and " + str(no_llampugues_img) + " of another fishes", flush=True)
+        print("For total images: " + str(total_images) + ", we have detected " + str(llampugues_img) + " images of llampugues and " + str(no_llampugues_img) + " of another fishes", flush=True)
 
     def extract_date(self, filename):
         date = datetime.strptime(filename.split(".")[0], 'OPMM_Subasta_%Y-%m-%d_%H_%M_%S')
