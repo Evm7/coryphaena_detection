@@ -488,6 +488,10 @@ class Demo_LLampuga():
                         no_llampugues_img += 1
         if llotja is False:
             pd.DataFrame(DATOMAP).to_csv(savedir + "/" + 'DATOs.csv', header=header2, index=None)
+        else:
+            direct = self.getDirectory_for_llotja(filename)
+            pd.DataFrame(DATOMAP).to_csv(direct + "/" + 'DATOs.csv', header=header2, index=None)
+
         print("For total images: " + str(total_images) + ", we have detected " + str(
             llampugues_img) + " images of llampugues and " + str(no_llampugues_img) + " of another fishes", flush=True)
 
@@ -511,6 +515,18 @@ class Demo_LLampuga():
         directory = self.organizeFile(date)
         return directory
 
+    def getDirectory_for_llotja(self, filename):
+        date = self.extract_date(filename)
+        year = date.strftime("%Y")
+        month = date.strftime("%m")
+        day = date.strftime("%d")
+
+        self.create_directory(self.INFERENCE_DIR + "/datos")
+        self.create_directory(self.INFERENCE_DIR + "/datos/" + year)
+        self.create_directory(self.INFERENCE_DIR + "/datos/" + year + "/" + month)
+        self.create_directory(self.INFERENCE_DIR + "/datos/" + year + "/" + month + "/" + day)
+
+        return self.INFERENCE_DIR+ "/datos/" + year + "/" + month + "/" + day
 
 class confusionMatrix():
     def __init__(self, directory):
