@@ -490,11 +490,12 @@ class Demo_LLampuga():
                         if not llotja:
                             print(filename + '--> no llampuga')
                         no_llampugues_img += 1
-        if llotja is False:
-            pd.DataFrame(DATOMAP).to_csv(savedir + "/" + 'DATOs.csv', header=header2, index=None)
-        else:
-            direct = self.getDirectory_for_llotja(filename)
-            pd.DataFrame(DATOMAP).to_csv(direct + "/" + 'DATOs.csv', header=header2, index=None)
+        if llampugues_img>0:
+            if llotja is False:
+                pd.DataFrame(DATOMAP).to_csv(savedir + "/" + 'DATOs.csv', header=header2, index=None)
+            else:
+                direct = self.getDirectory_for_llotja(filename)
+                pd.DataFrame(DATOMAP).to_csv(direct + "/" + 'DATOs.csv', header=header2, index=None)
 
         print("For total images: " + str(total_images) + ", we have detected " + str(llampugues_img) + " images of llampugues and " + str(no_llampugues_img) + " of another fishes", flush=True)
 
