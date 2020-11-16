@@ -126,7 +126,7 @@ class Inference():
         # images to stich list
         i = 0
         for auction_path in filtered_path:
-            percentage = float(i / self.frame_length) * 100
+            percentage = float(i / length) * 100
             print("Percentage of auctions processed: " + "%0.2f" % percentage + '%', flush=True)
             self.processAuction(auction_path)
             self.write_summary(auction_path)
