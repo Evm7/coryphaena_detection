@@ -27,7 +27,7 @@ class DatasetConfig(Config):
     NAME = "llampuga"
     IMAGES_PER_GPU = 4
     NUM_CLASSES = 1 + 2  #toni 1 +26
-    STEPS_PER_EPOCH = 50 # 190 / 4
+    STEPS_PER_EPOCH = 100 # 190 / 4
     VALIDATION_STEPS = 60
     GPU_COUNT = 1
 
