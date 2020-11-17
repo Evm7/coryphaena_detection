@@ -79,7 +79,7 @@ class Config(object):
     RPN_ANCHOR_SCALES = (64, 128, 256, 512,1024)
     # Ratios of anchors at each cell (width/height)
     # A value of 1 represents a square anchor, and 0.5 is a wide anchor
-    RPN_ANCHOR_RATIOS = [0.25, 0.5, 1, 2]
+    RPN_ANCHOR_RATIOS = [0.5, 1, 2]
 
     # Anchor stride
     # If 1 then anchors are created for each cell in the backbone feature map.
