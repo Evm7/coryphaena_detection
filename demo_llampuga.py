@@ -243,7 +243,7 @@ class Demo_LLampuga():
                          learning_rate=self.config.LEARNING_RATE,
                          epochs=epochs,
                          layers=layers,
-                         augmentation=self.seq_of_aug
+                         #augmentation=self.seq_of_aug
                          )
 
     def evaluation(self, number_of_images, confussion, directory):
