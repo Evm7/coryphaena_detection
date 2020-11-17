@@ -75,8 +75,8 @@ class Config(object):
     NUM_CLASSES = 1  # Override in sub-classes
 
     # Length of square anchor side in pixels
-    RPN_ANCHOR_SCALES = (32, 64, 128, 256, 512)
-    #RPN_ANCHOR_SCALES = (64, 128, 256, 512,1024)
+    #RPN_ANCHOR_SCALES = (32, 64, 128, 256, 512)
+    RPN_ANCHOR_SCALES = (64, 128, 256, 512,1024)
     # Ratios of anchors at each cell (width/height)
     # A value of 1 represents a square anchor, and 0.5 is a wide anchor
     RPN_ANCHOR_RATIOS = [0.5, 1, 2]
@@ -100,7 +100,7 @@ class Config(object):
     # If enabled, resizes instance masks to a smaller size to reduce
     # memory load. Recommended when using high-resolution images.
     USE_MINI_MASK = True
-    MINI_MASK_SHAPE = (448, 448)  # (height, width) of the mini-mask
+    MINI_MASK_SHAPE = (896, 896)  # (height, width) of the mini-mask
 
     # Input image resizing
     # Generally, use the "square" resizing mode for training and inferencing
