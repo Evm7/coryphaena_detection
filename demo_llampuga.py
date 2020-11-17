@@ -186,41 +186,41 @@ class Demo_LLampuga():
 
         # http://imgaug.readthedocs.io/en/latest/source/augmenters.html#sequential
         self.seq_of_aug = iaa.Sequential([
-            iaa.Crop(percent=(0, 0.1)),  # random crops
+                        iaa.Crop(percent=(0, 0.05)),  # random crops
 
-            # horizontally flip 50% of the images
-            iaa.Fliplr(0.5),
+                        # horizontally flip 50% of the images
+                        iaa.Fliplr(0.5),
 
-            # Gaussian blur to 50% of the images
-            # with random sigma between 0 and 0.5.
-            iaa.Sometimes(0.5, iaa.GaussianBlur(sigma=(0, 0.5))),
+                        # Gaussian blur to 50% of the images
+                        # with random sigma between 0 and 0.5.
+                        iaa.Sometimes(0.5, iaa.GaussianBlur(sigma=(0, 0.3))),
 
-            # Strengthen or weaken the contrast in each image.
-            iaa.ContrastNormalization((0.75, 1.5)),
+                        # Strengthen or weaken the contrast in each image.
+                        iaa.contrast.LinearContrast((0.9, 1.1)),
 
-            # Add gaussian noise.
-            # For 50% of all images, we sample the noise once per pixel.
-            # For the other 50% of all images, we sample the noise per pixel AND
-            # channel. This can change the color (not only brightness) of the
-            # pixels.
-            iaa.AdditiveGaussianNoise(loc=0, scale=(0.0, 0.05 * 255), per_channel=0.5),
+                        # Add gaussian noise.
+                        # For 50% of all images, we sample the noise once per pixel.
+                        # For the other 50% of all images, we sample the noise per pixel AND
+                        # channel. This can change the color (not only brightness) of the
+                        # pixels.
+                        iaa.AdditiveGaussianNoise(loc=0, scale=(0.0, 0.05 * 255), per_channel=0.3),
 
-            # Make some images brighter and some darker.
-            # In 20% of all cases, we sample the multiplier once per channel,
-            # which can end up changing the color of the images.
-            iaa.Multiply((0.8, 1.2), per_channel=0.2),
+                        # Make some images brighter and some darker.
+                        # In 20% of all cases, we sample the multiplier once per channel,
+                        # which can end up changing the color of the images.
+                        iaa.Multiply((0.95, 1.05), per_channel=0.2),
 
-            # Apply affine transformations to each image.
-            # Scale/zoom them from 90% 5o 110%
-            # Translate/move them, rotate them
-            # Shear them slightly -2 to 2 degrees.
-            iaa.Affine(
-                scale={"x": (0.9, 1.1), "y": (0.9, 1.1)},
-                translate_percent={"x": (-0.2, 0.2), "y": (-0.2, 0.2)},
-                rotate=(-5, 5),
-                shear=(-2, 2)
-            )
-        ], random_order=True)  # apply augmenters in random order
+                        # Apply affine transformations to each image.
+                        # Scale/zoom them from 90% 5o 110%
+                        # Translate/move them, rotate them
+                        # Shear them slightly -2 to 2 degrees.
+                        iaa.Affine(
+                            scale={"x": (0.9, 1.1), "y": (0.9, 1.1)},
+                            translate_percent={"x": (-0.1, 0.1), "y": (-0.1, 0.1)},
+                            rotate=(-5, 5),
+                            shear=(-1, 1)
+                        )
+                    ], random_order=True)  # apply augmenters in random order
 
         if visualize_augm:
             # Some example augmentations using the seq defined above.
