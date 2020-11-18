@@ -239,6 +239,7 @@ class Demo_LLampuga():
         # layers. You can also pass a regular expression to select
         # which layers to train bcy name pattern.
         self.model.keras_model.metrics_tensors = []
+        '''
         print(" WE WILL TRAIN HEADS FIRST TO WARM UP THE HEADS WEIGHTS")
         self.model.train(self.dataset_train, self.dataset_val,
                          learning_rate=0.001,
@@ -247,6 +248,7 @@ class Demo_LLampuga():
                          #augmentation=self.seq_of_aug
                          )
         print(" NOW WE WILL TRAIN ALL LAYERS")
+        '''
         self.model.train(self.dataset_train, self.dataset_val,
                          learning_rate=self.config.LEARNING_RATE,
                          epochs=epochs,
