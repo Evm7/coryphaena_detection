@@ -177,8 +177,9 @@ class Config(object):
     LEARNING_MOMENTUM = 0.9
 
     # Weight decay regularization
-    WEIGHT_DECAY = 0.0001
-
+    #WEIGHT_DECAY = 0.0001
+    WEIGHT_DECAY = 0.002
+        
     #   weights for more precise optimization.
     # Can be used for R-CNN training setup.
     LOSS_WEIGHTS = {
