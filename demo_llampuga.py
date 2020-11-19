@@ -287,6 +287,8 @@ class Demo_LLampuga():
         iterator = 0
         # Iteration all over the images randomly chosen
         for image_id in image_ids:
+            if int(image_id)== 6:
+                continue
             iterator += 1
             mat = []
             # Load image and ground truth data
