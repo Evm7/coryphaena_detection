@@ -99,7 +99,7 @@ class Config(object):
 
     # If enabled, resizes instance masks to a smaller size to reduce
     # memory load. Recommended when using high-resolution images.
-    USE_MINI_MASK = False
+    USE_MINI_MASK = True
     MINI_MASK_SHAPE = (448 , 448)  # (height, width) of the mini-mask
 
     # Input image resizing
@@ -178,7 +178,7 @@ class Config(object):
 
     # Weight decay regularization
     #WEIGHT_DECAY = 0.0001
-    WEIGHT_DECAY = 0.002
+    WEIGHT_DECAY = 0.01
         
     #   weights for more precise optimization.
     # Can be used for R-CNN training setup.
