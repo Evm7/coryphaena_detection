@@ -816,7 +816,7 @@ class automatiscm():
                             help='Introduce the aim of the execution: training, evaluating or testing')
         parser.add_argument('--weights_path', type=str, default="weights/mask_rcnn_llampuga_0068.h5",
                             help='Introduce the path to the weigths')
-        parser.add_argument('--epochs', type=int, default=150, help='Introduce the number of epochs for the training')
+        parser.add_argument('--epochs', type=int, default=120, help='Introduce the number of epochs for the training')
         parser.add_argument('--image_num', type=int, default=30,
                             help='Introduce the number of images you want to process')
         parser.add_argument('--layers', type=str, default="all",
