@@ -99,8 +99,8 @@ class Config(object):
 
     # If enabled, resizes instance masks to a smaller size to reduce
     # memory load. Recommended when using high-resolution images.
-    USE_MINI_MASK = False
-    MINI_MASK_SHAPE = (448 , 448)  # (height, width) of the mini-mask
+    USE_MINI_MASK = True
+    MINI_MASK_SHAPE = (224 , 224)  # (height, width) of the mini-mask
 
     # Input image resizing
     # Generally, use the "square" resizing mode for training and inferencing
