@@ -193,7 +193,7 @@ class Demo_LLampuga():
 
                         # Gaussian blur to 50% of the images
                         # with random sigma between 0 and 0.5.
-                        iaa.Sometimes(0.5, iaa.GaussianBlur(sigma=(0, 0.3))),
+                        iaa.Sometimes(0.2, iaa.GaussianBlur(sigma=(0, 0.3))),
 
                         # Strengthen or weaken the contrast in each image.
                         iaa.contrast.LinearContrast((0.9, 1.1)),
@@ -208,7 +208,7 @@ class Demo_LLampuga():
                         # Make some images brighter and some darker.
                         # In 20% of all cases, we sample the multiplier once per channel,
                         # which can end up changing the color of the images.
-                        iaa.Multiply((0.95, 1.05), per_channel=0.2),
+                        iaa.Multiply((0.95, 1.05), per_channel=0.1),
 
                         # Apply affine transformations to each image.
                         # Scale/zoom them from 90% 5o 110%
@@ -253,7 +253,7 @@ class Demo_LLampuga():
                          learning_rate=self.config.LEARNING_RATE,
                          epochs=epochs,
                          layers="all",
-                         #augmentation=self.seq_of_aug
+                         augmentation=self.seq_of_aug
                          )
 
     def evaluation(self, number_of_images, confussion, directory):
