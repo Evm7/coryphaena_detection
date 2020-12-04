@@ -4,7 +4,7 @@ weights/*
 
 # Ignore dataset of annotation #
 ##################
-dataset/*
+#dataset/*
 
 # Ignore dataset of images #
 ##################
