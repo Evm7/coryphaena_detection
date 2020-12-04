@@ -25,9 +25,9 @@ print ("MODULE PATH" + module_path)
 
 class DatasetConfig(Config):
     NAME = "llampuga"
-    IMAGES_PER_GPU = 4
+    IMAGES_PER_GPU = 1
     NUM_CLASSES = 1 + 2  #toni 1 +26
-    STEPS_PER_EPOCH = 380 # 190 / 4
+    STEPS_PER_EPOCH = 221 # 190 / 4
     VALIDATION_STEPS = 60
     GPU_COUNT = 1
 
