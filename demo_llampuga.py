@@ -821,7 +821,7 @@ class automatiscm():
                             help='Introduce the number of images you want to process')
         parser.add_argument('--layers', type=str, default="all",
                             help='Introduce the layers tou want to train: either "all" or "heads"')
-        parser.add_argument('--train_dataset', type=str, default="train.json",
+        parser.add_argument('--train_dataset', type=str, default="train_and_test2.json",
                             help='Introduce the path to the training dataset')
         parser.add_argument('--val_dataset', type=str, default="val.json",
                             help='Introduce the path to the validation dataset')
