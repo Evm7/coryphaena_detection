@@ -288,7 +288,7 @@ class Demo_toni():
             results = self.model.detect([image], verbose=0)
             r = results[0]
 
-            gt, pred = utils.gt_pred_lists(gt_class_id, gt_bbox, r['class_ids'], r['rois'], iou_tresh=0.4)
+            gt, pred = utils.gt_pred_lists(gt_class_id, gt_bbox, r['class_ids'], r['rois'], iou_tresh=0.5)
             gt_tot = np.append(gt_tot, gt)
             pred_tot = np.append(pred_tot, pred)
             print("Ground truth: " + str(gt), flush=True)
@@ -797,7 +797,7 @@ class automatiscm():
                             help='Introduce the path to the validation dataset')
         parser.add_argument('--test_dataset_images', type=str, default='',
                             help='Introduce the path to the testing dataste image directory')
-        parser.add_argument('--test_dataset_file', type=str, default='/test.json',
+        parser.add_argument('--test_dataset_file', type=str, default='/toni_test/ann/coco_test.json',
                             help='Introduce the path to the testing dataset json file')
 
         args = parser.parse_args()
