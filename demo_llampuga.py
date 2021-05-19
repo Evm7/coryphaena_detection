@@ -803,8 +803,8 @@ class automatiscm():
     def parse_arguments(self):
         import argparse
         # Import arguments into the python script
-        parser = argparse.ArgumentParser("IMEDEA: Project Deep Ecomar")
-        parser.add_argument("--directory", type=str, default="images/OPMM_Subasta_2020-09-01/",
+        parser = argparse.ArgumentParser("IMEDEA: Llampuga")
+        parser.add_argument("--directory", type=str, default="/ADD_IMAGE_PATH/",
                             help="Path to the directory of images to be tested")
         parser.add_argument('--not_display', action="store_false", default=True,
                             help='Introduce the argumnent to not display the processing of the images step by step')
@@ -821,7 +821,7 @@ class automatiscm():
                             help='Introduce the number of images you want to process')
         parser.add_argument('--layers', type=str, default="all",
                             help='Introduce the layers tou want to train: either "all" or "heads"')
-        parser.add_argument('--train_dataset', type=str, default="train_and_test2.json",
+        parser.add_argument('--train_dataset', type=str, default="train2.json",
                             help='Introduce the path to the training dataset')
         parser.add_argument('--val_dataset', type=str, default="val.json",
                             help='Introduce the path to the validation dataset')
