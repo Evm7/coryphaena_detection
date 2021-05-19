@@ -1,4 +1,4 @@
-# Deep_ecomar
+# Detection and Segmentation of Dolphinfish in auction boxes
 Project Deep Ecomar as a supervisor in IMEDEA: training, evaluating and testing of a neural network 
 
 THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github.com/Evm7) 💻
