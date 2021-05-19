@@ -21,8 +21,8 @@ class Inference():
         self.save_image = args.save_image
         self.directory = args.directory
         self.output_path = args.output
-        self.base_results = "/home/amaya/FOTOPEIX/MASK_RCNN/ESTEVE/inference"
-        self.base_input = "/extusers/llotja/"
+        self.base_results = "/add_path/inference"
+        self.base_input = "/add_path/"
         print("[INFO] Initializing ...", flush=True)
         self.demoLlampuga.initialize(mode=self.mode, training_dataset=None, validation_dataset="val.json",
                                      weight_path=self.weigth_path,
@@ -51,8 +51,8 @@ class Inference():
         if "/" in name:
             checker = name.split("/")
             name = checker[-1]
-
-        date = datetime.datetime.strptime(name, 'OPMM_Subasta_%Y-%m-%d.7z')  # OPMM_Subasta_YYYY-mm-dd.7z
+#extract the date in case it is written in the name of the images
+        date = datetime.datetime.strptime(name, 'add_name')  # OPMM_Subasta_YYYY-mm-dd.7z
         self.date = date.strftime("%Y_%m_%d")
         return date
 
