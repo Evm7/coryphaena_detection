@@ -1,5 +1,5 @@
 # Detection and Segmentation of Dolphinfish in auction boxes
-Project Deep Ecomar as a supervisor in IMEDEA: training, evaluating and testing of a neural network 
+Informed fishery management decisions require primary input data such as the number of fish landed and the dynamics of fish length. Obtaining these data can be costly if conducted by hand, which is the case for length data in most fisheries. This cost often implies reduced sample sizes, leading to information loss at, for example, boat level. The recent boost of artificial intelligence applied to fisheries opens promising opportunities to improve the assessment and management of stocks. By using Mask R-CNN  it is automatically estimated the number of dolphinfish Coryphaena hippurus caught in a Mediterranean fishery. The system operates on images of fish boxes automatically collected at the auction center and is applied during the whole fishing season. 
 
 THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github.com/Evm7) 💻
 
@@ -18,10 +18,7 @@ THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github
 
 ## Goal:
 
-The use of underwater cameras for scientific purposes is spreading. IMEDEA (Mediterranean Institute for Advanced Studies) has an extensive collection of underwater images taken over the last 10 years, as well as a three-camera underwater fixed station that collects images and video on a daily basis. All this information is potentially very valuable both to understand ecological processes and to improve the management of the natural marine resources of the Balearic Islands, but extracting it involves a great economic and time cost that ends up being subject to manual processing by specialized personnel.
-DEEP LEARNING applications (multi-layered convolution neural networks) have supposed a qualitative advance in per-computational vision. Currently, applications are beyond human capacity, both in efficiency and reliability. So much so that it is widely used in fields such as medicine and industry.
-But the applications in marine environment are still scarce. This project proposes (1) to develop a reliable way for the unsupervised interpretation of underwater images and (2) to demonstrate its scientific potential in a case of study  filled in the context of the long-term environmental monitoring strategy. 
-The project its being promoted by the Government of the Balearic Islands.
+
 
 ## Pre-requisites
 1) Python 3.6
