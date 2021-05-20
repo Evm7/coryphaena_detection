@@ -52,10 +52,10 @@ python demo_llampuga.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path <w
 - '--epochs' -->'Introduce the number of epochs for the training'
 - '--image_num' -->'Introduce the number of images you want to process'
 - '--layers' -->'Introduce the layers tou want to train: either "all" or "heads"'
-- '--train_dataset'  --> default="/dataset/train3_merged_190_prueba.json", help='Introduce the path to the training dataset'
-- '--val_dataset' --> default="'/dataset(annotations/val2_merged.json'", help='Introduce the path to the validation dataset'
-- '--test_dataset_images' --> default='/datset/test_llampuga_todas_cerca_fechas_training/', help='Introduce the path to the testing dataste image directory'
-- '--test_dataset_file'  --> default='/dataset/coco_test.json', help='Introduce the path to the testing dataset json file'
+- '--train_dataset'  --> default="/dataset/train2.json", help='Introduce the path to the training dataset'
+- '--val_dataset' --> default="'/dataset/val.json'", help='Introduce the path to the validation dataset'
+- '--test_dataset_images' --> default='', help='Introduce the path to the testing dataste image directory'
+- '--test_dataset_file'  --> default='/dataset/test.json', help='Introduce the path to the testing dataset json file'
 
 ## Scheme:
 The project has been divided into a deterministic scheme:
