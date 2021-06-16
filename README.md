@@ -1,11 +1,8 @@
-# Detection and Segmentation of Dolphinfish in auction boxes
+# Detection and Segmentation of coryphaena in auction boxes
 A reduced version of the scripts used in the work (ref article), is available to train, test and use over different dataset. 
 All the dataset is stored in folder dataset.
 
 THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github.com/Evm7) 💻
-
-
-## Goal:
 
 
 ## Pre-requisites
@@ -40,10 +37,11 @@ python demo_all.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path <weigth
 - '--epochs' -->'Introduce the number of epochs for the training'
 - '--image_num' -->'Introduce the number of images you want to process'
 - '--layers' -->'Introduce the layers tou want to train: either "all" or "heads"'
-- '--train_dataset'  --> default="/dataset/train2.json", help='Introduce the path to the training dataset'
-- '--val_dataset' --> default="'/dataset/val.json'", help='Introduce the path to the validation dataset'
-- '--test_dataset_images' --> default='', help='Introduce the path to the testing dataste image directory'
-- '--test_dataset_file'  --> default='/dataset/test.json', help='Introduce the path to the testing dataset json file'
+- '--train_annotations'  --> default="/dataset/train2.json", help='Introduce the path to the training dataset'
+- '--train_images'  --> default="/dataset/img_train", help='Introduce the path to the training images'
+- '--val_annotations' --> default="'/dataset/val.json'", help='Introduce the path to the validation dataset'
+- '--val_images' --> default="'/dataset/val.json'", help='Introduce the path to the validation dataset'¡
+
 
 ## Scheme:
 The project has been divided into a deterministic scheme:
