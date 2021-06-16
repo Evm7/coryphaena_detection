@@ -1,6 +1,6 @@
 # Detection and Segmentation of coryphaena in auction boxes
-A reduced version of the scripts used in the work (ref article), is available to train, test and use over different dataset. 
-All the dataset is stored in folder dataset.
+A reduced version of the scripts used in the work (ref article), is available to train, test and use with our own dataset or over different dataset. 
+
 
 THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github.com/Evm7) 💻
 
