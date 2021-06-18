@@ -1,5 +1,5 @@
-# Deep_ecomar
-Project Deep Ecomar as a supervisor in IMEDEA: training, evaluating and testing of a neural network 
+# CoryPhaena Detection
+Project CoryPhaena Detection as a supervisor in IMEDEA: training, evaluating and testing of a neural network 
 
 THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github.com/Evm7) 💻
 
@@ -12,7 +12,7 @@ THIS BRANCH HAS BEEN DEVELOPED BY THE USER [ESTEVE VALLS MASCARO](https://github
 - [X] Optimize Neural Netowrk managing functions
 - [X] Creation of elegant and simple way to output the matrix of confussion and some evaluating techniques
 - [x] Create inference script ready to be executed automatically daily.
-- [ ] Improve performance of the CNN by modifying training parameters
+- [X] Improve performance of the CNN by modifying training parameters
 
 
 
