@@ -1,0 +1,5 @@
+In this folder you should place:
+The weights file from COCO dataset to start  training with your own dataset.
+The weight file  "llampuga20201117T2233_88.h5", used in the article, can be obtained underequest.
+
+Wright to amaya@imedea.uib-csic.es 
