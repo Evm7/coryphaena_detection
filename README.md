@@ -23,7 +23,7 @@ NOTE: Make sure CUDA_HOME environment variable is set.
 
 ## Usage:
 
-There is plenty of arguments variations that can modificate the functioning of the video detector:
+There is plenty of arguments variations that can modificate the functioning of the image detector:
 ```
 python demo_coryphaena.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path <weigth_path_file.h5>] [--not_display]  [--save] [--notconfussion] [--epochs EPOCHS] [--image_num IMAGE_NUM] [--layers LAYERS] ...
 ```
@@ -47,7 +47,7 @@ python demo_coryphaena.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path 
 The project has been divided into a deterministic scheme:
   - mrcnn/: obtained from the MaskRcnn Matterplot repository, it contains the definition of the neural netwowrk which will be used in this project.
   - dataset/: it contains the annotated files with the tagged images references, and the images folders. It contains all the information for the training, evaluating and testing.
-  - weigths/: created when training the network (.h5).
+  - weigths/: If is this folder is not present will be created when training mode is used. Inside you can save the weights files generated in the different trainingscreated when training the network (.h5).
   - dataset.py : contains the classes used to manage the annotation files. It provides functions to both load dataset and loads configurations. Subclass from the Mask Rcnn matterplot. 
   - demo_coryphaena.py : main file which contains the functions to train, test and evaluate the neural network.
  
