@@ -47,7 +47,7 @@ python demo_coryphaena.py -mode <MODE> [-directory <DIRECTORY>] [--weigths_path 
 The project has been divided into a deterministic scheme:
   - mrcnn/: obtained from the MaskRcnn Matterplot repository, it contains the definition of the neural netwowrk which will be used in this project.
   - dataset/: it contains the annotated files with the tagged images references, and the images folders. It contains all the information for the training, evaluating and testing.
-  - weigths/: If is this folder is not present will be created when training mode is used. Inside you can save the weights files generated in the different trainingscreated when training the network (.h5).
+  - weigths/: If this folder is not present will be created when training mode is used. Inside you can save the weights files generated in the different trainingscreated when training the network (.h5).
   - dataset.py : contains the classes used to manage the annotation files. It provides functions to both load dataset and loads configurations. Subclass from the Mask Rcnn matterplot. 
   - demo_coryphaena.py : main file which contains the functions to train, test and evaluate the neural network.
  
